@@ -23,7 +23,7 @@ Function Get-RalphToken
 {
   $User = "USER"
   $Password = "PASSWORD"
-  $Server = "ralph.example.com"
+  $Server = "inv.example.com"
   $url = "https://$Server/api-token-auth/"
   $data = @{
     username = $User
