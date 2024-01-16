@@ -3,13 +3,8 @@
 $ErrorActionPreference = 'SilentlyContinue'
 
 # Import Modules & Snap-ins
-#Import-Module VMware.VimAutomation.Core -WarningAction SilentlyContinue
 Import-Module VMware.VimAutomation.Core
 
-#Import Logging Module
-Import-Module /tmp/scripts/send-syslogmessage.psm1
-
-#Set-PowerCLIConfiguration -Scope AllUsers -DefaultVIServerMode Multiple -InvalidCertificateAction Ignore -ParticipateInCEIP:$False -DisplayDeprecationWarnings:$False -Confirm:$False
 Set-PowerCLIConfiguration -Scope ([VMware.VimAutomation.ViCore.Types.V1.ConfigurationScope]::User -bor [VMware.VimAutomation.ViCore.Types.V1.ConfigurationScope]::AllUsers -bor [VMware.VimAutomation.ViCore.Types.V1.ConfigurationScope]::Session) -DefaultVIServerMode Multiple -InvalidCertificateAction Ignore -ParticipateInCEIP:$False -DisplayDeprecationWarnings:$False -Confirm:$False
 Import-Module PSLogging
 
